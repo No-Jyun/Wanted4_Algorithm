@@ -45,6 +45,9 @@ public:
 	// 질의 (Query - 물어보기)
 	// bounds : 영역 테스트 요청 값
 	// possibleNodes : 전달된 영역을 관리할 가능성이 있는 노드 목록
+	// 참조로 반환을 받는 이유 
+	// 1. 벡터의 복사 방지
+	// 2. 벡터에 노드를 누적하여 저장
 	void Query(const Bounds& bounds, std::vector<Node*>& possibleNodes);
 
 	// 정리
